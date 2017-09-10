@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Fonts
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+	<!-- Primary Page Layout
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	
+		<!-- Header
+		========================================== -->
+  		<header>
+  			<h1 class="logo">CrystalsCollector!</h1>
+		</header>
+
+		<!-- Main
+		========================================== -->
+		<main>
+			<div class="instructions">
+				<p>You will be given a random number at the start of the game.</p>
+				<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+				<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+				<p>The value of each crystal is hidden from you until you click on it.</p>
+				<p>Each time when the game starts, the game will change the values of each crystal.</p>
+			</div>
+			<div class="numberDiv">
+				<p>######</p>
+			</div>
+			<div class="winLose">
+				<p>Wins:</p>
+				<p>Losses:</p>
+			</div>
+			<div class="gemRow">
+				<div class="gem">
+					<img src="assets/images/gemRed.png" height=120 width=120/>
+				</div>
+				<div class="gem">
+					<img src="assets/images/gemBlue.png" height=120 width=120/>
+				</div>
+				<div class="gem">
+					<img src="assets/images/gemYellow.png" height=120 width=120/>
+				</div>
+				<div class="gem">
+					<img src="assets/images/gemGreen.png" height=120 width=120/>
+				</div>
+			</div>
+			<div class="scoreHeader">
+				<p>Your total score is:</p>
+			</div>
+			<div class="score">
+				<p>######</p>
+			</div>
+
+		</main>
+
+		<!-- Footer
+		========================================== -->
+		<footer>
+		</footer>	
+</body>
+
+	<!-- JavaScript / jQuery
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript/game.js"></script>
+
+
+</html>

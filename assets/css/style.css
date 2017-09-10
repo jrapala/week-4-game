@@ -1,0 +1,126 @@
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+body {
+	font-size: 16px; 
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	line-height: 1.2em;
+	color: #008000; 
+	letter-spacing: .015em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Georgia', Times, "Times New Roman", serif;
+}
+
+h1 {
+	font-size: 1.8em;
+	color: #FFF;
+}
+
+
+/* Colors
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+   * Regular font color: #008000
+   * Logo font color: #FFF 
+   * Random number font color: #800080
+   * Score font color: #FFF
+
+   * Logo: #EE7600 #bd5d28
+   * Instructions: #f9e1c1	 
+   * Random Number: #53c16d
+   * Wins/Losses: #69faf9
+   * Score/Tally: #3e9282
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.clearfix {
+  content: "";
+  display: block;
+  clear: both; 
+}
+
+/* Custom Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+body {
+	background: url("../images/weather.png");
+}
+
+.logo {
+	background-color: #bd5d28;
+	width: 33.33%;
+	height: 100px;
+	padding: 40px 24px;
+}
+
+.instructions {
+	background-color: #f9e1c1;
+	width: 50%;
+	padding: 10px 8px;
+}
+
+.numberDiv {
+	background-color: #53c16d;
+	width: 25%;
+	float: left;
+	margin-top: 20px;
+	padding: 10px 8px;
+	color: #800080;
+}
+
+.winLose {
+	background-color: #69faf9;
+	width: 10%;
+	float: left;
+	margin: 20px 0 20px 20px;
+	padding: 10px 8px;
+}
+
+.gemRow {
+	clear: both;
+}
+.gem {
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.gem:first-child {
+	margin-left: 0px;
+}
+
+.scoreHeader {
+	background-color: #3e9282;
+	width: 25%;
+	clear: both;
+	margin-top: 40px;
+	padding: .5px 8px;
+	color: #FFF;
+	text-shadow: 1px 1px 2px #888;
+	clear: both;
+}
+
+.score {
+	background-color: #3e9282;
+	width: 25%;
+	padding: 10px 8px;
+	color: #FFF;
+	margin-top: 20px;
+	text-shadow: 1px 1px 2px #888;
+}
