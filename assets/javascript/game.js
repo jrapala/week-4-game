@@ -1,19 +1,17 @@
-// Goal is a random number between 19 and 120
-// Each crystal is a random number between 1 and 12
-// Add "You won!!" or "You lost!!" div after game ends / generate new number / give crystals new random numbers
+// TASKS:
+// Restructure gemIds & gemValues into object?
+// Restructure crystalsApp.clickGem() into loop.
+// Can crystalsApp.play() be ommitted?
 //
-//
-
 // jQuery: CrystalsCollector Game | By Juliette Rapala
 // =====================================================================================
 
 $(document).ready(function(){
 
-
-// Global Variables 
-// =====================================================================================
-
 		var crystalsApp = {
+
+			// Variables 
+			// =====================================================================================
 
 			wins : 0,
 			losses : 0,
@@ -21,6 +19,9 @@ $(document).ready(function(){
 			randomNum : 0,
 			gemIds : ['#gemOne', '#gemTwo', '#gemThree', '#gemFour'],
 			gemValues : [0,0,0,0],
+
+			// Functions
+			// =====================================================================================	
 
 			
 			// Pick random number between 1 and 12 (inclusive) for gem values.
@@ -66,26 +67,27 @@ $(document).ready(function(){
 				};
 			},
 
+			// Increment score on gem click.
 			clickGem : function() {
 				var self = this;
 				$('#gemOne').on('click', function() {			
 					self.score += self.gemValues[0];
-					self.updateScore();
+					$('#score').html(self.score);
 					self.checkWin();
 				});
 				$('#gemTwo').on('click', function() {			
 					self.score += self.gemValues[1];
-					self.updateScore();
+					$('#score').html(self.score);
 					self.checkWin();
 				});
 				$('#gemThree').on('click', function() {			
 					self.score += self.gemValues[2];
-					self.updateScore();
+					$('#score').html(self.score);
 					self.checkWin();
 				});
 				$('#gemFour').on('click', function() {			
 					self.score += self.gemValues[3];
-					self.updateScore();
+					$('#score').html(self.score);
 					self.checkWin();
 				});
 			},
@@ -112,52 +114,8 @@ $(document).ready(function(){
 					// Initialize new game
 					this.init();
 				};
-			},
-
-
-
-
-
-			// Update total score 
-			updateScore : function() {
-				$('#score').html(this.score);
-			},
-
-
-
-
-
-			
-
-
-
-
-//$("#gemOne").click(function(){
-//	$(this).data('clicked',true);
-//});
-//
-//if($('#gemOne').data('clicked')) {
-
-//				newGame : function() {
-//				this.generateGemValues();
-//				this.generateWinValue();
-//				this.clickGem();
-//			},
-
-
-			//clearScore : function() {
-			//	this.score = 0;
-			//	$('#score').html(this.score);				
-			//},
-
-
-			// Functions
-			// =====================================================================================	
-	
-
+			}
 		}
-
-
 
 
 // Gameplay
