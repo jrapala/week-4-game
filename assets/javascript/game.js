@@ -97,7 +97,7 @@ $(document).ready(function(){
 					// Increment wins
 					this.wins++;
 					// Change message
-					$('#message').html("You win!");
+					$('#message').html("You won!!");
 					// Update win total
 					$('#wins').html(this.wins);
 					// Initialize new game
@@ -106,7 +106,7 @@ $(document).ready(function(){
 					// Increment losses
 					this.losses++;
 					// Change message
-					$('#message').html("You lose!");
+					$('#message').html("You lost!!");
 					// Update loss total
 					$('#losses').html(this.losses);
 					// Initialize new game

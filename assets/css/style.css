@@ -30,6 +30,10 @@ h1 {
 	color: #FFF;
 }
 
+#randomNum, #score {
+	font-size: 2em;
+}
+
 
 /* Colors
 ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -62,6 +66,8 @@ body {
 	background: url("../images/weather.png");
 }
 
+/* ===== Logo ===== */
+
 .logo {
 	background-color: #bd5d28;
 	width: 33.33%;
@@ -69,11 +75,15 @@ body {
 	padding: 40px 24px;
 }
 
+/* ===== Instruction Panel ===== */
+
 .instructions {
 	background-color: #f9e1c1;
 	width: 50%;
 	padding: 10px 8px;
 }
+
+/* ===== Random Number Panel ===== */
 
 .numberDiv {
 	background-color: #53c16d;
@@ -82,7 +92,10 @@ body {
 	margin-top: 20px;
 	padding: 10px 8px;
 	color: #800080;
+	height: 175px;
 }
+
+/* ===== Win/Loss Panel ===== */
 
 .winLose {
 	background-color: #69faf9;
@@ -90,11 +103,19 @@ body {
 	float: left;
 	margin: 20px 0 20px 20px;
 	padding: 10px 8px;
+	height: 175px;
 }
 
-.gemRow {
-	clear: both;
+.winLose p {
+	float: left;
 }
+
+#wins, #losses {
+	margin-left: 5px;
+}
+
+/* ===== Gems ===== */
+
 .gem {
 	float: left;
 	margin-left: 20px;
@@ -105,15 +126,15 @@ body {
 	margin-left: 0px;
 }
 
+/* ===== Score Panel ===== */
+
 .scoreHeader {
 	background-color: #3e9282;
 	width: 25%;
-	clear: both;
 	margin-top: 40px;
 	padding: .5px 8px;
 	color: #FFF;
 	text-shadow: 1px 1px 2px #888;
-	clear: both;
 }
 
 .scorePanel {
@@ -121,6 +142,20 @@ body {
 	width: 25%;
 	padding: 10px 8px;
 	color: #FFF;
-	margin-top: 20px;
+	margin: 20px 0;
 	text-shadow: 1px 1px 2px #888;
 }
+
+/* ===== Footer ===== */
+
+footer {
+	height: 75px;
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+}
+
+footer p {
+	padding: 15px;
+}
+
