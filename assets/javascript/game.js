@@ -19,9 +19,18 @@ $(document).ready(function(){
 			losses : 0,
 			score : 0,
 			randomNum : 0,
+			gemIds : ['#gemOne', '#gemTwo', '#gemThree', '#gemFour'],
 			gemValues : [0,0,0,0],
-			$gemOne : $('#gemOne'),
 
+			init : function () {
+				$('#wins').html(this.wins);
+				$('#losses').html(this.losses);
+			},
+
+			clearScore : function() {
+				this.score = 0;
+				$('#score').html(this.score);				
+			},
 
 			// Update total score 
 			updateScore : function() {
@@ -43,26 +52,60 @@ $(document).ready(function(){
 				$('#randomNum').html(random);	
 			},
 
+
 			clickGem : function() {
 				var self = this;
 				$('#gemOne').on('click', function() {			
-					console.log(self.score);
 					self.score += self.gemValues[0];
-					console.log("Gem one was clicked!");
-					console.log("Gem one has a value of " + self.score);
 					self.updateScore();
+					self.checkWin();
 				});
+				$('#gemTwo').on('click', function() {			
+					self.score += self.gemValues[1];
+					self.updateScore();
+					self.checkWin();
+				});
+				$('#gemThree').on('click', function() {			
+					self.score += self.gemValues[2];
+					self.updateScore();
+					self.checkWin();
+				});
+				$('#gemFour').on('click', function() {			
+					self.score += self.gemValues[3];
+					self.updateScore();
+					self.checkWin();
+				});
+			},
+
+			checkWin : function() {
+				console.log(this.score);
+				console.log(this.randomNum);				
+				if (this.score == this.randomNum) {
+					this.wins++;
+					$('#message').html("You win!");
+					$('#wins').html(this.wins);
+					this.clearScore();
+				} else if (this.score > this.randomNum) {
+					this.losses++;
+					$('#message').html("You lose!");
+					$('#losses').html(this.losses);
+					this.clearScore();
+				};
 			},
 
 			newGame : function() {
 				this.generateGemValues();
 				this.generateWinValue();
 				this.clickGem();
-
 			}
 
+//$("#gemOne").click(function(){
+//	$(this).data('clicked',true);
+//});
+//
+//if($('#gemOne').data('clicked')) {
 
-		
+
 
 			// Functions
 			// =====================================================================================	
@@ -76,6 +119,7 @@ $(document).ready(function(){
 // Gameplay
 // =====================================================================================
 
+crystalsApp.init();
 crystalsApp.updateScore();
 crystalsApp.newGame();
 
