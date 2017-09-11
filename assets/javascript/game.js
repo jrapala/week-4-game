@@ -1,7 +1,7 @@
 // TASKS:
 // Restructure gemIds & gemValues into object?
 // Restructure crystalsApp.clickGem() into loop.
-// Can crystalsApp.play() be ommitted?
+// 
 //
 // jQuery: CrystalsCollector Game | By Juliette Rapala
 // =====================================================================================
@@ -43,8 +43,9 @@ $(document).ready(function(){
 			randomizer : function () {
 				this.generateGemValues();
 				this.generateWinValue();
-				console.log("New gem values: " + this.gemValues);
-				console.log("New win value: " + this.randomNum);
+				// For Debugging Purposes..
+				// console.log("New gem values: " + this.gemValues);
+				// console.log("New win value: " + this.randomNum);
 			},
 
 			// Initialize game. Display variables and pick random numbers for number to guess and gem values.
@@ -56,18 +57,7 @@ $(document).ready(function(){
 				this.randomizer();
 			},
 
-			// Play game. Can be done without?
-			play : function () {
-				// If score is less than the number to match, allow user to click gem.
-				if (this.score < this.randomNum) {
-					this.clickGem();
-				// If score is equal to or greater than the number to match, check for a win or loss.
-				} else {
-					this.checkwin();
-				};
-			},
-
-			// Increment score on gem click.
+			// Increment score on gem click. Check if you have won or lost.
 			clickGem : function() {
 				var self = this;
 				$('#gemOne').on('click', function() {			
@@ -122,7 +112,7 @@ $(document).ready(function(){
 // =====================================================================================
 
 crystalsApp.init();
-crystalsApp.play();
+crystalsApp.clickGem();
 
 });
 
