@@ -1,8 +1,3 @@
-// TASKS:
-// Restructure gemIds & gemValues into object?
-// Restructure crystalsApp.clickGem() into loop.
-// 
-//
 // jQuery: CrystalsCollector Game | By Juliette Rapala
 // =====================================================================================
 
@@ -17,7 +12,6 @@ $(document).ready(function(){
 			losses : 0,
 			score : 0,
 			randomNum : 0,
-			gemIds : ['#gemOne', '#gemTwo', '#gemThree', '#gemFour'],
 			gemValues : [0,0,0,0],
 
 			// Functions
@@ -94,6 +88,7 @@ $(document).ready(function(){
 					$('#wins').html(this.wins);
 					// Initialize new game
 					this.init();
+				// If score is greater than the number to match, the player has lost.
 				} else if (this.score > this.randomNum) {
 					// Increment losses
 					this.losses++;
@@ -108,11 +103,11 @@ $(document).ready(function(){
 		}
 
 
-// Gameplay
-// =====================================================================================
+	// Gameplay
+	// =====================================================================================
 
-crystalsApp.init();
-crystalsApp.clickGem();
+	crystalsApp.init();
+	crystalsApp.clickGem();
 
 });
 
